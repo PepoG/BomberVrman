@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1088249212038495709}
   - component: {fileID: 1088249212038495707}
   - component: {fileID: 4436436613725354812}
+  - component: {fileID: 1163468850569344973}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -137,3 +138,30 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1163468850569344973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088249212038495704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6364f27859ca00a489f200986879e78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 1736774184510417178, guid: 0121692f38807454bb057d5fc6759544,
+    type: 3}
+  placeBomb:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Place Bomb
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4bdd5c36-5fe4-4e2e-b060-fb66677b9954
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
