@@ -5,13 +5,14 @@ public class GridGenerator : MonoBehaviour
 {
     public GameObject destructibleBlockPrefab;
     public GameObject indestructibleBlockPrefab;
+    public GameObject playerPrefab;
 
     private float cellSize = 1.0f;
     [Multiline]
     public string levelString =
-        ".0.0.\n" +
-        "0.0.0\n" +
-        ".0.0.\n";
+        ".O.O.\n" +
+        "O.O.O\n" +
+        ".O.O.\n";
 
     void Start()
     {
@@ -29,20 +30,23 @@ public class GridGenerator : MonoBehaviour
                 char cell = row[x];
                 var position = new Vector3(x * cellSize, 0, -y * cellSize);
 
-                if (cell != ' ')
+                if (cell == 'P') {
+                    Instantiate(playerPrefab, position, Quaternion.identity, transform);
+                }
+                else  if (cell == ' ')
                 {
                     // empty
                 }
                 else if (cell == 'O')
                 {
-                    Instantiate(indestructibleBlockPrefab, position, Quaternion.identity);
+                    Instantiate(indestructibleBlockPrefab, position, Quaternion.identity, transform);
                 }
                 else if (cell == '.')
                 {
-                    Instantiate(destructibleBlockPrefab, position, Quaternion.identity);
+                    Instantiate(destructibleBlockPrefab, position, Quaternion.identity, transform);
                 }
                 else {
-                    Debug.Log("Unknown block");
+                    Debug.Log("Unknown block" + cell);
                 }
             }
         }
