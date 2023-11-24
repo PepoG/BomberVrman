@@ -10,9 +10,11 @@ public class GridGenerator : MonoBehaviour
     private float cellSize = 1.0f;
     [Multiline]
     public string levelString =
-        ".O.O.\n" +
-        "O.O.O\n" +
-        ".O.O.\n";
+        "OOOOOOO\n" +
+        "O.O.O.O\n" +
+        "OO.O.OO\n" +
+        "O.O.O.O\n" +
+        "OOOOOOO";
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class GridGenerator : MonoBehaviour
             for (int x = 0; x < row.Length; x++)
             {
                 char cell = row[x];
-                var position = new Vector3(x * cellSize, 0, -y * cellSize);
+                var position = transform.position + new Vector3(x * cellSize, 0, -y * cellSize);
 
                 if (cell == 'P') {
                     Instantiate(playerPrefab, position, Quaternion.identity, transform);

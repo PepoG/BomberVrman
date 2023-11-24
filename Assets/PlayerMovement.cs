@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
    
     public InputAction joystick;
     public InputActionProperty joystick2;
-    private const float stepSize = 1f;
+    private const float stepSize = 5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,33 +21,30 @@ public class PlayerMovement : MonoBehaviour
         
         
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        var pos = gameObject.transform.position;
+        var c = GetComponent<CharacterController>();
         var inputValue = joystick2.action.ReadValue<Vector2>();
+
        if(inputValue.x > 0.5f)
         {
-            pos.x += stepSize;
+            c.Move(new Vector3(stepSize * Time.deltaTime, 0, 0));
             Debug.Log("right");
         }
        else if(inputValue.x < -0.5f)
         {
-            pos.x -= stepSize;
+            c.Move(new Vector3(-stepSize * Time.deltaTime, 0, 0));
             Debug.Log("left");
         }
        else if (inputValue.y > 0.5f)
         {
-            pos.z += stepSize;
+            c.Move(new Vector3(0, 0, stepSize * Time.deltaTime));
             Debug.Log("up");
         }
        else if (inputValue.y < -0.5f)
         {
-            pos.z -= stepSize;
+            c.Move(new Vector3(0, 0, -stepSize * Time.deltaTime));
             Debug.Log("down");
         }
-        gameObject.transform.position = pos;
-
     }
 }
