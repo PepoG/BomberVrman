@@ -238,7 +238,6 @@ MonoBehaviour:
       type: 3}
   explozionSize: 2
   numberOfBombsTotal: 2
-  numberOfBombsToPlace: 2
 --- !u!1001 &7657346566254619917
 PrefabInstance:
   m_ObjectHideFlags: 0

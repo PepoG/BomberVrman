@@ -9,7 +9,6 @@ public class BombController : MonoBehaviour
     public InputActionProperty placeBomb;
     public int explozionSize;
     public int numberOfBombsTotal;
-    public int numberOfBombsToPlace;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +21,10 @@ public class BombController : MonoBehaviour
     {
         if(placeBomb.action.triggered)
         {
-            if (numberOfBombsToPlace != 0)
+            if (numberOfBombsTotal != 0)
             {
                 PlaceBomb();
-                numberOfBombsToPlace -= 1;
+                numberOfBombsTotal -= 1;
             }
         }
     }

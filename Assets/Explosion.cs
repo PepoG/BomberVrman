@@ -11,6 +11,7 @@ public class Explosion : MonoBehaviour
     public GameObject explosionPrefab;
     public GameObject explosionSoundEffectPrefab;
     public GameObject explosionSizePOwerupPrefab;
+    public GameObject upgradeBombPowerupPrefab;
     public float maxDistance = 100;
     public int numberOfBombs;
     // Start is called before the first frame update
@@ -60,11 +61,20 @@ public class Explosion : MonoBehaviour
 
         if (hit.collider && hit.collider.CompareTag("Destructible")) {
             Debug.Log("Destroying hit target");
-            var probabilityOfDrop = 0.25f;
-            if (Random.Range(0f, 1f) <= probabilityOfDrop)
+            var probabilityOfDropOfExplosionSizeDrop = 0.1f;
+            var probabilityOfUpgradeBombDrop = 0.1f;
+
+
+            if (Random.Range(0f, 1f) <= probabilityOfDropOfExplosionSizeDrop)
             {
                 Instantiate(explosionSizePOwerupPrefab, hit.collider.gameObject.transform.position, Quaternion.identity);
+            }else if (Random.Range(0f, 1f) <= probabilityOfUpgradeBombDrop)
+            {
+                Instantiate(upgradeBombPowerupPrefab, hit.collider.gameObject.transform.position, Quaternion.identity);
             }
+
+
+
             Destroy(hit.collider.gameObject);//.SetActive(false);
         }
     }
@@ -96,12 +106,12 @@ public class Explosion : MonoBehaviour
         Debug.Log("Do pice");
         if(player.GetComponent<BombController>() != null)
         {
-            player.GetComponent<BombController>().numberOfBombsToPlace += 1;
+            player.GetComponent<BombController>().numberOfBombsTotal += 1;
         }
 
         if (player.GetComponent<Bomb2Controller>() != null)
         {
-            player.GetComponent<Bomb2Controller>().numberOfBombsToPlace += 1;
+            player.GetComponent<Bomb2Controller>().numberOfBombsTotal += 1;
         }
         gameObject.SetActive(false);
 
