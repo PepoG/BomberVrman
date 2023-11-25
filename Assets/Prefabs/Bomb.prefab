@@ -114,6 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 5386662777473550827, guid: f1f71abdfbeebe64785971c69ee0e00c,
     type: 3}
+  explosionSoundEffectPrefab: {fileID: 5144078872939624471, guid: 2a39921a57cb1b347ac8dc1f74fdd965,
+    type: 3}
   maxDistance: 4
 --- !u!1001 &5386396214031773464
 PrefabInstance:

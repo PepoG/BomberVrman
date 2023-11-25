@@ -8,6 +8,7 @@ using Sirenix.Utilities;
 public class Explosion : MonoBehaviour
 {
     public GameObject explosionPrefab;
+    public GameObject explosionSoundEffectPrefab;
     public float maxDistance = 100;
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,9 @@ public class Explosion : MonoBehaviour
     }
 
     IEnumerator Explode() {
-        yield return new WaitForSeconds(1);
+        var sound = Instantiate(explosionSoundEffectPrefab);
+
+        yield return new WaitForSeconds(1.2f);
 
         List<GameObject> gos = new List<GameObject>();
 
@@ -81,6 +84,10 @@ public class Explosion : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
 
         Destroy(gameObject);
+
+        yield return new WaitForSeconds(1f);
+
+        Destroy(sound);
     }
 
     void SpawinExplosion(Vector3 direction, List<GameObject> gos)
