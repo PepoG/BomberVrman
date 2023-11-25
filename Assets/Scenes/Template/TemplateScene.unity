@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 81512120}
   - component: {fileID: 81512121}
   m_Layer: 0
-  m_Name: GridGenerator
+  m_Name: LevelGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81512118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.89, y: 2.08, z: -0.47}
+  m_LocalPosition: {x: -2.89, y: 0.644, z: -0.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -173,15 +173,9 @@ MonoBehaviour:
     type: 3}
   playerPrefab: {fileID: 1088249212038495704, guid: 74748196ccd1fc44ba1609a2933f79c6,
     type: 3}
-  levelString: 'OOOOOOO
-
-    O.O.O.O
-
-    OB.O.OO
-
-    OPO.O.O
-
-    OOOOOOO'
+  bombPrefab: {fileID: 1736774184510417178, guid: 0121692f38807454bb057d5fc6759544,
+    type: 3}
+  levelString: "OOOOOOO\r\nO.O.O.O\r\nOP.O.OO\r\nO B.O.O\r\nOOOOOOO\r"
 --- !u!1 &139655395
 GameObject:
   m_ObjectHideFlags: 0

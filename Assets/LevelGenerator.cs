@@ -1,20 +1,22 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class GridGenerator : MonoBehaviour
+public class LevelGenerator : MonoBehaviour
 {
     public GameObject destructibleBlockPrefab;
     public GameObject indestructibleBlockPrefab;
     public GameObject playerPrefab;
+    public GameObject bombPrefab;
 
     private float cellSize = 1.0f;
     [Multiline]
-    public string levelString =
-        "OOOOOOO\n" +
-        "O.O.O.O\n" +
-        "OO.O.OO\n" +
-        "O.O.O.O\n" +
-        "OOOOOOO";
+    public string levelString = @"
+    OOOOOOO
+    O.O.O.O
+    OP.O.OO
+    O B.O.O
+    OOOOOOO
+    ";
 
     void Start()
     {
@@ -32,10 +34,11 @@ public class GridGenerator : MonoBehaviour
                 char cell = row[x];
                 var position = transform.position + new Vector3(x * cellSize, 0, -y * cellSize);
 
-                if (cell == 'P') {
+                if (cell == 'P')
+                {
                     Instantiate(playerPrefab, position, Quaternion.identity, transform);
                 }
-                else  if (cell == ' ')
+                else if (cell == ' ')
                 {
                     // empty
                 }
@@ -47,7 +50,12 @@ public class GridGenerator : MonoBehaviour
                 {
                     Instantiate(destructibleBlockPrefab, position, Quaternion.identity, transform);
                 }
-                else {
+                else if (cell == 'B')
+                {
+                    Instantiate(bombPrefab, position, Quaternion.identity, transform);
+                }
+                else
+                {
                     Debug.Log("Unknown block" + cell);
                 }
             }
