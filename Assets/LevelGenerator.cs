@@ -95,6 +95,6 @@ OOOOOOOOOOOOOOOOOOOOOOO
 
         var tableGo = Instantiate(tablePrefab, Vector3.zero, Quaternion.identity, transform);
         tableGo.transform.localScale = new Vector3(width, 0.1f, height);
-        tableGo.transform.localPosition = new Vector3((width - 1) / 2, -1f, (height - 1) / -2);
+        tableGo.transform.localPosition = new Vector3((width - 1) / 2, -0.5f, (height - 1) / -2);
     }
 }

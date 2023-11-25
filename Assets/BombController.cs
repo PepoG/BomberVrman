@@ -26,4 +26,12 @@ public class BombController : MonoBehaviour
     {
         Instantiate(bombPrefab,transform.position, Quaternion.identity);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bomb"))
+            {
+            other.isTrigger = false;
+        }
+    }
 }
