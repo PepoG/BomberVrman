@@ -207,6 +207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heavy_block
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fc3c3551d00c28e44acd0f01491f233d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Indistructible
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3c3551d00c28e44acd0f01491f233d, type: 3}
 --- !u!4 &5301107428674567791 stripped

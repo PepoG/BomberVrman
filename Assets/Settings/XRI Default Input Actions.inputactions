@@ -2647,7 +2647,7 @@
                     "id": "f4c41ff8-3988-45e9-996b-60883e6fe7a3",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": true
                 }
             ],
@@ -2700,7 +2700,7 @@
                     "name": "",
                     "id": "966a3922-a3f4-4a92-bf44-34cf3c1adca1",
                     "path": "<Keyboard>/space",
-                    "interactions": "Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "PlantBomb",

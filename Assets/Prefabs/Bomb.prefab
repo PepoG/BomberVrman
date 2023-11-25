@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2850140544489878456}
   m_Layer: 6
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Bombaaa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,4 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 5386662777473550827, guid: f1f71abdfbeebe64785971c69ee0e00c,
     type: 3}
-  maxDistance: 2
+  maxDistance: 4

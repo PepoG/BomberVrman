@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BombController : MonoBehaviour
+public class Bomb2Controller : MonoBehaviour
 {
     public GameObject bombPrefab;
     public InputActionProperty placeBomb;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(placeBomb.action.triggered)
+        if (placeBomb.action.WasPressedThisFrame())
         {
             PlaceBomb();
         }
@@ -31,7 +31,7 @@ public class BombController : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Bomb"))
-            {
+        {
             other.isTrigger = false;
         }
     }
