@@ -173,6 +173,8 @@ MonoBehaviour:
     type: 3}
   playerPrefab: {fileID: 1088249212038495704, guid: 74748196ccd1fc44ba1609a2933f79c6,
     type: 3}
+  player2Prefab: {fileID: 1088249212038495704, guid: 6ee71954eddc8b3409f4e4a2a7dcb021,
+    type: 3}
   bombPrefab: {fileID: 1736774184510417178, guid: 0121692f38807454bb057d5fc6759544,
     type: 3}
   tablePrefab: {fileID: 6722822740065372390, guid: 0cfbc2ddd2735304ab553bb7ae6cc9de,
@@ -181,7 +183,7 @@ MonoBehaviour:
 
     O.....................O
 
-    O.O.O.O.O.O.O.O.O.O.O.O
+    O.B.O.O.O.O.O.O.O.O.O.O
 
     O.....................O
 
@@ -195,8 +197,8 @@ MonoBehaviour:
 
     OBO.O.O.O.O.O.O.O.O.O.O
 
-    O
-    ....................O
+    O  
+    Q   ..............O
 
     OBO.O.O.O.O.O.O.O.O.O.O
 
@@ -3874,17 +3876,17 @@ PrefabInstance:
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.31
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.09
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.09
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}

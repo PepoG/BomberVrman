@@ -29,22 +29,22 @@ public class PlayerMovement : MonoBehaviour
        if(inputValue.x > 0.5f)
         {
             c.Move(new Vector3(stepSize * Time.deltaTime, 0, 0));
-            Debug.Log("right");
+            //Debug.Log("right");
         }
        else if(inputValue.x < -0.5f)
         {
             c.Move(new Vector3(-stepSize * Time.deltaTime, 0, 0));
-            Debug.Log("left");
+            //Debug.Log("left");
         }
        else if (inputValue.y > 0.5f)
         {
             c.Move(new Vector3(0, 0, stepSize * Time.deltaTime));
-            Debug.Log("up");
+            //Debug.Log("up");
         }
        else if (inputValue.y < -0.5f)
         {
             c.Move(new Vector3(0, 0, -stepSize * Time.deltaTime));
-            Debug.Log("down");
+            //Debug.Log("down");
         }
     }
 }

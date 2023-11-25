@@ -22,6 +22,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject destructibleBlockPrefab;
     public GameObject indestructibleBlockPrefab;
     public GameObject playerPrefab;
+    public GameObject player2Prefab;
     public GameObject bombPrefab;
     public GameObject tablePrefab;
 
@@ -69,6 +70,10 @@ OOOOOOOOOOOOOOOOOOOOOOO
                 if (cell == 'P')
                 {
                     Instantiate(playerPrefab, position, Quaternion.identity, transform);
+                }
+                else if (cell == 'Q')
+                {
+                    Instantiate(player2Prefab, position, Quaternion.identity, transform);
                 }
                 else if (cell == ' ')
                 {
