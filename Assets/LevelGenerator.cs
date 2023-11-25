@@ -51,7 +51,7 @@ OOOOOOOOOOOOOOOOOOOOOOO
 
     void GenerateLevel()
     {
-        var rows = levelString.Split(Environment.NewLine).Where(p => p.Length > 0).ToArray();
+        var rows = levelString.Split("\n").Where(p => p.Length > 0).ToArray();
 
         var height = rows.Length;
         var width = rows[0].Length;

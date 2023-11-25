@@ -30,13 +30,13 @@ public class PlayerMovement : MonoBehaviour
         {
             c.Move(new Vector3(stepSize * Time.deltaTime, 0, 0));
             //Debug.Log("right");
-        }
-       else if(inputValue.x < -0.5f)
+        } else if(inputValue.x < -0.5f)
         {
             c.Move(new Vector3(-stepSize * Time.deltaTime, 0, 0));
             //Debug.Log("left");
         }
-       else if (inputValue.y > 0.5f)
+       
+        if (inputValue.y > 0.5f)
         {
             c.Move(new Vector3(0, 0, stepSize * Time.deltaTime));
             //Debug.Log("up");

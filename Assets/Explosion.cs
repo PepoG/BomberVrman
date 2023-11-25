@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 using UnityEngine.UIElements;
+using Sirenix.Utilities;
 
 public class Explosion : MonoBehaviour
 {
@@ -62,7 +63,9 @@ public class Explosion : MonoBehaviour
         SpawinExplosion(-transform.right, gos);
         SpawinExplosion(transform.forward, gos);
         SpawinExplosion(-transform.forward, gos);
-        yield return new WaitForSeconds(1);
+
+        yield return new WaitForSeconds(0.1f);
+
         foreach (var g in gos)
         {
             Destroy(g);
@@ -70,9 +73,13 @@ public class Explosion : MonoBehaviour
 
         DestroyBlocks(transform.right);
         DestroyBlocks(-transform.right);
-        DestroyBlocks(-transform.forward);
         DestroyBlocks(transform.forward);
-        yield return new WaitForSeconds(0.2f);
+        DestroyBlocks(-transform.forward);
+
+        gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(0.05f);
+
         Destroy(gameObject);
     }
 
