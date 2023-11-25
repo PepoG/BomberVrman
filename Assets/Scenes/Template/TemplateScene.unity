@@ -181,9 +181,14 @@ MonoBehaviour:
     type: 3}
   levelString: 'OOOOOOOOOOOOOOOOOOOOOOO
 
+    O...................Q O
+
+    O.O.O.O.O.O.O.O.O.O.O
+    O
+
     O.....................O
 
-    O.B.O.O.O.O.O.O.O.O.O.O
+    O.O.O.O.O.O.O.O.O.O.O.O
 
     O.....................O
 
@@ -193,14 +198,10 @@ MonoBehaviour:
 
     O.O.O.O.O.O.O.O.O.O.O.O
 
-    OB....................O
+    O.....................O
 
-    OBO.O.O.O.O.O.O.O.O.O.O
-
-    O  
-    Q   ..............O
-
-    OBO.O.O.O.O.O.O.O.O.O.O
+    O
+    O.O.O.O.O.O.O.O.O.O.O
 
     O P...................O
 
