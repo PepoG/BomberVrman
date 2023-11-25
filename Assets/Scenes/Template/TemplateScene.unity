@@ -175,7 +175,34 @@ MonoBehaviour:
     type: 3}
   bombPrefab: {fileID: 1736774184510417178, guid: 0121692f38807454bb057d5fc6759544,
     type: 3}
-  levelString: "OOOOOOO\r\nO.O.O.O\r\nOP.O.OO\r\nO B.O.O\r\nOOOOOOO\r"
+  tablePrefab: {fileID: 6722822740065372390, guid: 0cfbc2ddd2735304ab553bb7ae6cc9de,
+    type: 3}
+  levelString: 'OOOOOOOOOOOOOOOOOOOOOOO
+
+    O.....................O
+
+    O.O.O.O.O.O.O.O.O.O.O.O
+
+    O.....................O
+
+    O.O.O.O.O.O.O.O.O.O.O.O
+
+    O.....................O
+
+    O.O.O.O.O.O.O.O.O.O.O.O
+
+    O.....................O
+
+    O.O.O.O.O.O.O.O.O.O.O.O
+
+    O.....................O
+
+    OBO.O.O.O.O.O.O.O.O.O.O
+
+    O
+    P...................O
+
+    OOOOOOOOOOOOOOOOOOOOOOO'
 --- !u!1 &139655395
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +526,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6895887226161143353, guid: 3e07eccb5e6f459d886de95044adb1d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7540877742921677025, guid: 3e07eccb5e6f459d886de95044adb1d9,
         type: 3}
       propertyPath: m_IsActive
@@ -814,6 +846,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &458068821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1731298970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &464316875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3841,12 +3879,12 @@ PrefabInstance:
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.27
+      value: 3.09
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.61
+      value: -8.09
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
@@ -3886,6 +3924,39 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1731298970}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1731298975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458068821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 2
+  m_AntialiasingQuality: 1
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1740969850
 GameObject:
   m_ObjectHideFlags: 0
