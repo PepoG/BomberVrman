@@ -7,9 +7,12 @@ using Sirenix.Utilities;
 
 public class Explosion : MonoBehaviour
 {
+    public GameObject player;
     public GameObject explosionPrefab;
     public GameObject explosionSoundEffectPrefab;
+    public GameObject explosionSizePOwerupPrefab;
     public float maxDistance = 100;
+    public int numberOfBombs;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,12 @@ public class Explosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void OnDestroy()
+    {
+        
         
     }
 
@@ -51,7 +60,12 @@ public class Explosion : MonoBehaviour
 
         if (hit.collider && hit.collider.CompareTag("Destructible")) {
             Debug.Log("Destroying hit target");
-            hit.collider.gameObject.SetActive(false);
+            var probabilityOfDrop = 0.25f;
+            if (Random.Range(0f, 1f) <= probabilityOfDrop)
+            {
+                Instantiate(explosionSizePOwerupPrefab, hit.collider.gameObject.transform.position, Quaternion.identity);
+            }
+            Destroy(hit.collider.gameObject);//.SetActive(false);
         }
     }
 
@@ -79,6 +93,16 @@ public class Explosion : MonoBehaviour
         DestroyBlocks(transform.forward);
         DestroyBlocks(-transform.forward);
 
+        Debug.Log("Do pice");
+        if(player.GetComponent<BombController>() != null)
+        {
+            player.GetComponent<BombController>().numberOfBombsToPlace += 1;
+        }
+
+        if (player.GetComponent<Bomb2Controller>() != null)
+        {
+            player.GetComponent<Bomb2Controller>().numberOfBombsToPlace += 1;
+        }
         gameObject.SetActive(false);
 
         yield return new WaitForSeconds(0.05f);

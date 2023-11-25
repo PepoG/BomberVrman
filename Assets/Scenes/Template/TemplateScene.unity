@@ -186,10 +186,6 @@ MonoBehaviour:
     O.O.O.O.O.O.O.O.O.O.O
     O
 
-    O....................QO
-
-    O.O.O.O.O.O.O.O.O.O.O.O
-
     O.....................O
 
     O.O.O.O.O.O.O.O.O.O.O.O
@@ -200,7 +196,11 @@ MonoBehaviour:
 
     O.....................O
 
-    OBO.O.O.O.O.O.O.O.O.O.O
+    O.O.O.O.O.O.O.O.O.O.O.O
+
+    O.....................O
+
+    OQO.O.O.O.O.O.O.O.O.O.O
 
     O
     P...................O
@@ -875,7 +875,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 975c381ecda891c4fa6a7cbaef0c8b63,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 975c381ecda891c4fa6a7cbaef0c8b63,
         type: 3}
@@ -1192,7 +1192,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: df7ee8a3fa45b9e4188680f6ddb61a16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df7ee8a3fa45b9e4188680f6ddb61a16,
         type: 3}
@@ -9455,7 +9455,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2b2e514fdc21f4644924e41a6a1de8f4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b2e514fdc21f4644924e41a6a1de8f4,
         type: 3}

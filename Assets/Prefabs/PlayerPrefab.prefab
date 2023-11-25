@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5572706195493657994}
   - component: {fileID: -8063944645897858668}
   - component: {fileID: 61707295328021754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerPrefab
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &5572706195493657994
 MonoBehaviour:
@@ -199,6 +199,9 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  explozionSize: 2
+  numberOfBombsTotal: 2
+  numberOfBombsToPlace: 2
 --- !u!114 &-8063944645897858668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +235,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1088249212038495711}
     m_Modifications:
+    - target: {fileID: -8792074842755774159, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85e3d387b1782b047ac98a0e39540686,
         type: 3}
       propertyPath: m_RootOrder
@@ -307,16 +315,56 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2511240423080479738, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85e3d387b1782b047ac98a0e39540686,
         type: 3}
       propertyPath: m_Name
       value: Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419668218356737086, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762089664540088250, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092210733147632322, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107913692295745523, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6164996480583612547, guid: 85e3d387b1782b047ac98a0e39540686,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4463e30e7f6b1b94e9ca5f820b8686f3, type: 2}
+    - target: {fileID: 8009987137999418058, guid: 85e3d387b1782b047ac98a0e39540686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85e3d387b1782b047ac98a0e39540686, type: 3}
 --- !u!4 &9190366033643590281 stripped
