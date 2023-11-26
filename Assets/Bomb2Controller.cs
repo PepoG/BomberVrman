@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Bomb2Controller : MonoBehaviour
 {
@@ -31,10 +32,11 @@ public class Bomb2Controller : MonoBehaviour
 
     private void PlaceBomb()
     {
-        Debug.Log("Planting bomb");
-        var bombInstance = Instantiate(bombPrefab, new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z)), Quaternion.identity);
-        bombInstance.GetComponent<Explosion>().maxDistance = explozionSize;
-        bombInstance.GetComponent<Explosion>().player = gameObject;
+            Debug.Log("Planting bomb");
+            var bombInstance = Instantiate(bombPrefab, new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z)), Quaternion.identity);
+            bombInstance.GetComponent<Explosion>().maxDistance = explozionSize;
+            bombInstance.GetComponent<Explosion>().player = gameObject;
+        
     }
 
     private void OnTriggerExit(Collider other)

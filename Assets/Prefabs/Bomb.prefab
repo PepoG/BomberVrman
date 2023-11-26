@@ -121,6 +121,7 @@ MonoBehaviour:
     type: 3}
   upgradeBombPowerupPrefab: {fileID: 1266097564776496311, guid: 7c8f7a9defeca884289f4297248d6316,
     type: 3}
+  gameStateManager: {fileID: 0}
   maxDistance: 2
   numberOfBombs: 0
 --- !u!1001 &5386396214031773464

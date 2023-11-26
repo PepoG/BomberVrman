@@ -4,6 +4,9 @@ using UnityEngine;
 using static UnityEditor.PlayerSettings;
 using UnityEngine.UIElements;
 using Sirenix.Utilities;
+using UnityEngine.SceneManagement;
+using DG.Tweening.Core.Easing;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Explosion : MonoBehaviour
 {
@@ -12,6 +15,7 @@ public class Explosion : MonoBehaviour
     public GameObject explosionSoundEffectPrefab;
     public GameObject explosionSizePOwerupPrefab;
     public GameObject upgradeBombPowerupPrefab;
+    public GameObject gameStateManager;
     public float maxDistance = 100;
     public int numberOfBombs;
     // Start is called before the first frame update
@@ -86,10 +90,121 @@ public class Explosion : MonoBehaviour
 
         List<GameObject> gos = new List<GameObject>();
 
-        SpawinExplosion(transform.right, gos);
-        SpawinExplosion(-transform.right, gos);
-        SpawinExplosion(transform.forward, gos);
-        SpawinExplosion(-transform.forward, gos);
+        var go1 = SpawinExplosion(transform.right, gos);
+        var go2 = SpawinExplosion(-transform.right, gos);
+        var go3 = SpawinExplosion(transform.forward, gos);
+        var go4 = SpawinExplosion(-transform.forward, gos);
+
+        var gsm = GameObject.Find("GameStateManager");
+        if (go1)
+        {
+            GameObject.FindWithTag("XR RIg").transform.parent = null;
+
+            Destroy(go1);
+            if(gsm)
+            {
+                gsm.GetComponent<GameManager>().resetGame = true;
+                if (go1.name == "PlayerPrefab(Clone)")
+                {
+                    gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                }
+                else
+                {
+                    gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                }
+            }
+        }
+        if (go2)
+        {
+            GameObject.FindWithTag("XR RIg").transform.parent = null;
+
+            Destroy(go2);
+            if (gsm)
+            {
+                gsm.GetComponent<GameManager>().resetGame = true;
+
+                if (gsm.GetComponent<GameManager>().winPlayer == "")
+                {
+                    if (go2.name == "PlayerPrefab(Clone)")
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                    }
+                    else
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                    }
+                }
+            }
+
+        }
+        if (go3)
+        {
+            GameObject.FindWithTag("XR RIg").transform.parent = null;
+
+            Destroy(go3);
+            if (gsm)
+            {
+                gsm.GetComponent<GameManager>().resetGame = true;
+                if (gsm.GetComponent<GameManager>().winPlayer == "")
+                {
+                    if (go3.name == "PlayerPrefab(Clone)")
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                    }
+                    else
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                    }
+                }
+
+            }
+
+        }
+        if (go4)
+        {
+            GameObject.FindWithTag("XR RIg").transform.parent = null;
+
+            Destroy(go4);
+            if (gsm)
+            {
+                gsm.GetComponent<GameManager>().resetGame = true;
+                if (gsm.GetComponent<GameManager>().winPlayer == "")
+                {
+                    if (go4.name == "PlayerPrefab(Clone)")
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                    }
+                    else
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                    }
+                }
+
+            }
+        }
+
+        if(gameObject.GetComponent<CapsuleCollider>().isTrigger)
+        {
+            GameObject.FindWithTag("XR RIg").transform.parent = null;
+
+            Destroy(player);
+            if (gsm)
+            {
+                gsm.GetComponent<GameManager>().resetGame = true;
+                if (gsm.GetComponent<GameManager>().winPlayer == "")
+                {
+                    if (player.name == "PlayerPrefab(Clone)")
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                    }
+                    else
+                    {
+                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                    }
+                }
+            }
+        }
+
 
         yield return new WaitForSeconds(0.1f);
 
@@ -103,28 +218,35 @@ public class Explosion : MonoBehaviour
         DestroyBlocks(transform.forward);
         DestroyBlocks(-transform.forward);
 
-        Debug.Log("Do pice");
-        if(player.GetComponent<BombController>() != null)
+        if(player && player.GetComponent<BombController>() != null)
         {
             player.GetComponent<BombController>().numberOfBombsTotal += 1;
         }
 
-        if (player.GetComponent<Bomb2Controller>() != null)
+        if (player && player.GetComponent<Bomb2Controller>() != null)
         {
             player.GetComponent<Bomb2Controller>().numberOfBombsTotal += 1;
         }
         gameObject.SetActive(false);
 
         yield return new WaitForSeconds(0.05f);
+        Debug.Log("Hello");
+
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         Destroy(gameObject);
 
         yield return new WaitForSeconds(1f);
 
         Destroy(sound);
+
+
     }
 
-    void SpawinExplosion(Vector3 direction, List<GameObject> gos)
+    GameObject SpawinExplosion(Vector3 direction, List<GameObject> gos)
     {
         var position = transform.position;
 
@@ -156,17 +278,23 @@ public class Explosion : MonoBehaviour
         }
         else if (hit.collider.CompareTag("Player")) {
             Debug.Log("Bitchs dead!!!");
+
             var hitPosition = hit.collider.gameObject.transform.position;
             var diff = hitPosition - position;
             var diffVector = Vector3.Scale(diff, direction);
             // Debug.Log(diffVector.magnitude);
             count = Mathf.Round(diffVector.magnitude);
+
+            return hit.collider.gameObject;
+
         }
 
-            for (int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             position = position + direction;
             gos.Add(Instantiate(explosionPrefab, position, Quaternion.identity));
         }
+
+        return null;
     }
 }

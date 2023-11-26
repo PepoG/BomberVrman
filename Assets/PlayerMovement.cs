@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
    
     public InputAction joystick;
     public InputActionProperty joystick2;
-    private const float stepSize = 5f;
+    private const float stepSize = 4f;
 
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         
         
     }
-    void FixedUpdate()
+    void Update()
     {
         var c = GetComponent<CharacterController>();
         var inputValue = joystick2.action.ReadValue<Vector2>();
