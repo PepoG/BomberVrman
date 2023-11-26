@@ -105,11 +105,11 @@ public class Explosion : MonoBehaviour
                 gsm.GetComponent<GameManager>().resetGame = true;
                 if (go1.name == "PlayerPrefab(Clone)")
                 {
-                    gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                    gsm.GetComponent<GameManager>().winPlayer = "Player 2 Wins";
                 }
                 else
                 {
-                    gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                    gsm.GetComponent<GameManager>().winPlayer = "Player 1 Wins";
                 }
             }
         }

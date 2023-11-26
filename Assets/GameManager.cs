@@ -15,11 +15,17 @@ public class GameManager : MonoBehaviour
     public GameObject VRPlayer;
     public GameObject XRRig;
     private bool isDirectView = false;
+    //public GameObject powerUpSoundEffectPrefab;
     // Start is called before the first frame update
     void Start()
     {
         
     }
+
+    //public void PlayPowerupSound()
+    //{
+    //    Instantiate(powerUpSoundEffectPrefab);
+    //}
 
     // Update is called once per frame
     void Update()

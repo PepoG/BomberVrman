@@ -25,6 +25,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject player2Prefab;
     public GameObject bombPrefab;
     public GameObject tablePrefab;
+    public GameObject networkPlayer;
 
     private float cellSize = 1.0f;
     [TextArea(10, 15)]
@@ -85,7 +86,9 @@ OOOOOOOOOOOOOOOOOOOOOOO
                 }
                 else if (cell == '.')
                 {
-                    Instantiate(destructibleBlockPrefab, position, Quaternion.identity, transform);
+                    var instance = Instantiate(destructibleBlockPrefab, position, Quaternion.identity, transform);
+                   // networkPlayer.GetComponent<NetworkPlayer>().destructiblesOriginal.Add(instance.transform);
+                    //Instantiate(destructibleBlockPrefab, position, Quaternion.identity, networkPlayer.transform);
                 }
                 else if (cell == 'B')
                 {

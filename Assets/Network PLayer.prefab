@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 512730830
+  GlobalObjectIdHash: 2128219639
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -167,6 +167,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHand: {fileID: 5473638110080545179}
   playerPrefab: {fileID: 7824229194225086447}
+  destructibles: []
+  destructiblesOriginal: []
+  levelGenerator: {fileID: 0}
+  meshToDisable:
+  - {fileID: 7162163729776292340}
+  - {fileID: 7824229193709539152}
 --- !u!114 &4174568827883833170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +346,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2263562616542422533, guid: e37b24187c8e67c4cb9d7fb232af4c09, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e37b24187c8e67c4cb9d7fb232af4c09, type: 3}
+--- !u!23 &7824229193709539152 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2263562615950657211, guid: e37b24187c8e67c4cb9d7fb232af4c09,
+    type: 3}
+  m_PrefabInstance: {fileID: 8357824163739306475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7824229194225086440 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2263562616542422531, guid: e37b24187c8e67c4cb9d7fb232af4c09,
