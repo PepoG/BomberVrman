@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
 {
    
     public InputAction joystick;
-    public InputActionProperty joystick2;
+    public InputActionProperty joystick2left;
+    public InputActionProperty joystick2right;
     private const float stepSize = 4f;
 
 
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         var c = GetComponent<CharacterController>();
-        var inputValue = joystick2.action.ReadValue<Vector2>();
+        var inputValue = joystick2left.action.ReadValue<Vector2>();
 
        if(inputValue.x > 0.5f)
         {
@@ -42,6 +43,30 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("up");
         }
        else if (inputValue.y < -0.5f)
+        {
+            c.Move(new Vector3(0, 0, -stepSize * Time.deltaTime));
+            //Debug.Log("down");
+        }
+
+        inputValue = joystick2right.action.ReadValue<Vector2>();
+
+        if (inputValue.x > 0.5f)
+        {
+            c.Move(new Vector3(stepSize * Time.deltaTime, 0, 0));
+            //Debug.Log("right");
+        }
+        else if (inputValue.x < -0.5f)
+        {
+            c.Move(new Vector3(-stepSize * Time.deltaTime, 0, 0));
+            //Debug.Log("left");
+        }
+
+        if (inputValue.y > 0.5f)
+        {
+            c.Move(new Vector3(0, 0, stepSize * Time.deltaTime));
+            //Debug.Log("up");
+        }
+        else if (inputValue.y < -0.5f)
         {
             c.Move(new Vector3(0, 0, -stepSize * Time.deltaTime));
             //Debug.Log("down");

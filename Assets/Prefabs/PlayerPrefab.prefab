@@ -112,18 +112,31 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  joystick2:
+  joystick2left:
     m_UseReference: 1
     m_Action:
-      m_Name: Joystick 2
+      m_Name: Joystick 2left
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 8632d8c1-149d-465a-b9da-62cebe16fc7c
+      m_Id: 8a104d51-1883-432a-a060-c519765607c6
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  joystick2right:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Joystick 2right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: aa87c974-466d-4045-9bd7-ee54bf31a94a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
 --- !u!143 &4436436613725354812
 CharacterController:
@@ -137,12 +150,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.82
-  m_Radius: 0.5
+  m_Radius: 0.55
   m_SlopeLimit: 1
   m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.51, z: 0}
+  m_Center: {x: 0, y: 0.33, z: 0}
 --- !u!54 &2956806739022388947
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -173,13 +186,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 1736774184510417178, guid: 0121692f38807454bb057d5fc6759544,
     type: 3}
-  placeBomb:
+  placeBombRight:
     m_UseReference: 1
     m_Action:
-      m_Name: Place Bomb
+      m_Name: Place Bomb Right
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: e249f0d9-f743-4d59-b140-3d891150eb82
+      m_Id: fc42dbeb-17ca-441d-a200-60d3161af9fa
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  placeBombLeft:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Place Bomb Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 41e9acc1-8ffd-4acf-b315-7147bb23d30f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []

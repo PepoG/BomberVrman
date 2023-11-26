@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class BombController : MonoBehaviour
 {
     public GameObject bombPrefab;
-    public InputActionProperty placeBomb;
+    public InputActionProperty placeBombRight;
+    public InputActionProperty placeBombLeft;
     public int explozionSize;
     public int numberOfBombsTotal;
 
@@ -20,7 +21,7 @@ public class BombController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(placeBomb.action.triggered)
+        if(placeBombRight.action.triggered || placeBombLeft.action.triggered)
         {
             if (numberOfBombsTotal != 0)
             {

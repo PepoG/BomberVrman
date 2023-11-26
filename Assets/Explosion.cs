@@ -7,6 +7,26 @@ using UnityEngine.SceneManagement;
 using DG.Tweening.Core.Easing;
 using UnityEngine.XR.Interaction.Toolkit;
 
+
+/*
+
+
+OOOOOOOOOOO
+O.......Q O
+O.O.O.O.O O
+O.........O
+O........
+O.O.O.O.O.O
+O.........O
+O.O.O.O.O.O
+O.........O
+O O.O.O.O.O
+O P.......O
+OOOOOOOOOOO
+
+
+*/
+
 public class Explosion : MonoBehaviour
 {
     public GameObject player;
@@ -126,11 +146,11 @@ public class Explosion : MonoBehaviour
                 {
                     if (go2.name == "PlayerPrefab(Clone)")
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 2 Wins";
                     }
                     else
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 1 Wins";
                     }
                 }
             }
@@ -148,11 +168,11 @@ public class Explosion : MonoBehaviour
                 {
                     if (go3.name == "PlayerPrefab(Clone)")
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 2 Wins";
                     }
                     else
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 1 Wins";
                     }
                 }
 
@@ -171,11 +191,11 @@ public class Explosion : MonoBehaviour
                 {
                     if (go4.name == "PlayerPrefab(Clone)")
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 2 Wins";
                     }
                     else
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 1 Wins";
                     }
                 }
 
@@ -194,11 +214,11 @@ public class Explosion : MonoBehaviour
                 {
                     if (player.name == "PlayerPrefab(Clone)")
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 2 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 2 Wins";
                     }
                     else
                     {
-                        gsm.GetComponent<GameManager>().winPlayer = "Peayer 1 Wins";
+                        gsm.GetComponent<GameManager>().winPlayer = "Player 1 Wins";
                     }
                 }
             }
