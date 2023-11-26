@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Multiplayer/Examples/VR Player/Realtime + VR Player.unity
     guid: 84218d11aa1e88249920d7eb329a3d03
   - enabled: 1
